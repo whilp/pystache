@@ -3,8 +3,8 @@ import pystache
 class Simple(pystache.View):
     template_path = 'examples'
 
-    def thing(self):
+    def thing(self, text):
         return "pizza"
 
-    def blank(self):
+    def blank(self, text):
         pass

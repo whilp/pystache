@@ -6,14 +6,14 @@ class NestedContext(pystache.View):
     def outer_thing(self):
         return "two"
 
-    def foo(self):
+    def foo(self, text):
         return {'thing1': 'one', 'thing2': 'foo'}
 
-    def derp(self):
+    def derp(self, text):
         return [{'inner': 'car'}]
         
-    def herp(self):
+    def herp(self, text):
         return [{'outer': 'car'}]
         
-    def nested_context_in_view(self):
+    def nested_context_in_view(self, text):
         return 'it works!' if self.get('outer') == self.get('inner') else ''

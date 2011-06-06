@@ -20,11 +20,11 @@ def replace(subject, this='foo', with_this='bar'):
 class Lambdas(pystache.View):
     template_path = 'examples'
 
-    def replace_foo_with_bar(self, text=None):
+    def replace_foo_with_bar(self, text):
         return replace
 
-    def rot13(self, text=None):
+    def rot13(self, text):
         return rot
 
-    def sort(self, text=None):
+    def sort(self, text):
         return lambda text: ''.join(sorted(text))

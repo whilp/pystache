@@ -3,8 +3,8 @@ import pystache
 class DoubleSection(pystache.View):
     template_path = 'examples'
 
-    def t(self):
-        return True
+    def t(self, text):
+        return text
 
-    def two(self):
+    def two(self, text):
         return "second"

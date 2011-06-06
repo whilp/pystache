@@ -45,6 +45,7 @@ for spec in specs:
 
     for test in yaml.load(open(spec))['tests']:
         test = buildTest(test, name)
+        print name
         setattr(MustacheSpec, test.__name__, test)
 
 if __name__ == '__main__':
