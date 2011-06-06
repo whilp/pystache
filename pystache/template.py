@@ -13,6 +13,9 @@ def call(view, x, template=None):
             x = x(template)
         else:
             x = x(view, template)
+    elif not x and x != 0:
+        return unicode('')
+        
     if callable(x):
         x = x(template)
     
