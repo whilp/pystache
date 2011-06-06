@@ -13,6 +13,9 @@ def call(view, x, template=None):
             x = x(template)
         else:
             x = x(view, template)
+    if callable(x):
+        x = x(template)
+    
     return unicode(x)
 
 def parse(template, view, delims=('{{', '}}')):
