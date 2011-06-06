@@ -9,10 +9,9 @@ def call(view, x, template=None):
             x = x()
         elif len(args) is 1 and args[0] == 'self':
             x = x(view)
-        elif len(args) is 1:
-            x = x(template)
         else:
-            x = x(view, template)
+            x = x(template)
+    
     elif not x and x != 0:
         return unicode('')
         
